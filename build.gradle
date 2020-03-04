@@ -37,13 +37,16 @@ dependencies {
 	compile('org.springframework.boot:spring-boot-starter-web')
 	//compile('mysql:mysql-connector-java')
 	compile('io.micrometer:micrometer-registry-prometheus:1.0.4')
+// https://mvnrepository.com/artifact/net.sf.supercsv/super-csv
+	compile group: 'net.sf.supercsv', name: 'super-csv', version: '2.3.1'
+
+
 	// https://mvnrepository.com/artifact/io.github.millij/poi-object-mapper
 	compile group: 'io.github.millij', name: 'poi-object-mapper', version: '1.0.0'
 // https://mvnrepository.com/artifact/com.google.gdata/core
-	compile group: 'com.google.gdata', name: 'core', version: '1.47.1'
-	compile 'com.google.api-client:google-api-client:1.30.4'
-	compile 'com.google.oauth-client:google-oauth-client-jetty:1.30.4'
-	compile 'com.google.apis:google-api-services-sheets:v4-rev581-1.25.0'
+	compile "com.opencsv:opencsv:4.0"
+	// https://mvnrepository.com/artifact/org.apache.velocity/velocity
+	compile group: 'org.apache.velocity', name: 'velocity', version: '1.6.2'
 	testCompile('org.springframework.boot:spring-boot-starter-test')
 	testCompile('org.springframework.security:spring-security-test')
 	testCompile ('org.mockito:mockito-core:2.7.22')

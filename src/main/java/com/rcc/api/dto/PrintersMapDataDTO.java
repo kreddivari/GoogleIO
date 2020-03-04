@@ -1,52 +1,112 @@
 package com.rcc.api.dto;
 
-import io.github.millij.poi.ss.model.annotations.Sheet;
 
-@Sheet
+import com.fasterxml.jackson.annotation.JsonPropertyOrder;
+import io.github.millij.poi.ss.model.annotations.Sheet;
+import io.github.millij.poi.ss.model.annotations.SheetColumn;
+
+@Sheet("Sheet1")
+//@JsonPropertyOrder({"place","alternative_name_or_spellings","state_province_or_district","press_name","alternative_name_or_spelling_of_press","name_of_newspaper_journal_printed","first_book_printed","beginning_year","beginning_month","ending_year","ending_month","date_notes","proprietor_founder","manager_superintendent","editor","printer","patron","location","date_est_or_earliest_record","source","id","notes","lat","long","startplace","endplace","photo_link","title_of_photo","photo_credit","added_by","comments","year"})
 public class PrintersMapDataDTO {
 
+    @SheetColumn("Place")
     private String place;
+    @SheetColumn("Alternative Name or Spellings")
     private String alternative_name_or_spellings;
+    @SheetColumn("State, Province, or District")
     private String state_province_or_district;
+    @SheetColumn("Press Name")
     private String press_name;
-    private String alternative_name_or_spelling__of_press;
+    @SheetColumn("Alternative Name or Spelling of Press")
+    private String alternative_name_or_spelling_of_press;
+    @SheetColumn("Name of Newspaper/Journal printed")
     private String name_of_newspaper_journal_printed;
+    @SheetColumn("First Book printed")
     private String first_book_printed;
+    @SheetColumn("Beginning Year")
     private String beginning_year;
+    @SheetColumn("Beginning Month")
     private String beginning_month;
+    @SheetColumn("Ending Year")
     private String ending_year;
+    @SheetColumn("Ending Month")
     private String ending_month;
+    @SheetColumn("Date Notes")
     private String date_notes;
+    @SheetColumn("Proprietor/Founder")
     private String proprietor_founder;
+    @SheetColumn("Manager/Superintendent")
     private String manager_superintendent;
+    @SheetColumn("Editor")
     private String editor;
+    @SheetColumn("Printer")
     private String printer;
+    @SheetColumn("Patron")
     private String patron;
+    @SheetColumn("Location")
     private String location;
+    @SheetColumn("Date est. or Earliest record")
     private String date_est_or_earliest_record;
+    @SheetColumn("Source")
     private String source;
+    @SheetColumn("ID")
     private String id;
+    @SheetColumn("Notes")
     private String notes;
+    @SheetColumn("Lat")
     private String lat;
+    @SheetColumn("Long")
     private String lon;
+    @SheetColumn("StartPlace")
     private String startplace;
+    @SheetColumn("EndPlace")
     private String endplace;
+    @SheetColumn("Photo Link")
     private String photo_link;
+    @SheetColumn("Title of Photo")
     private String title_of_photo;
+    @SheetColumn("Photo Credit")
     private String photo_credit;
+    @SheetColumn("Added By")
     private String added_by;
+    @SheetColumn("Comments")
+    private String comments;
+    @SheetColumn("Year")
+    private String year;
+
+    public String getYear() {
+        return year;
+    }
+
+    public void setYear(String year) {
+        this.year = year;
+    }
+    /*newer things*/
+
     private String cell_letter;
+
     private String cell_star;
+
     private String cell_end;
+
     private String cell_count;
+
     private String single;
+
     private String range;
+
     private String cell_range1;
+
     private String cell_range2;
+
     private String cell_range3;
+
     private String group1;
+
     private String group2;
+
     private String group3;
+
 
     public String getPlace() {
         return place;
@@ -80,12 +140,12 @@ public class PrintersMapDataDTO {
         this.press_name = press_name;
     }
 
-    public String getAlternative_name_or_spelling__of_press() {
-        return alternative_name_or_spelling__of_press;
+    public String getAlternative_name_or_spelling_of_press() {
+        return alternative_name_or_spelling_of_press;
     }
 
-    public void setAlternative_name_or_spelling__of_press(String alternative_name_or_spelling__of_press) {
-        this.alternative_name_or_spelling__of_press = alternative_name_or_spelling__of_press;
+    public void setAlternative_name_or_spelling_of_press(String alternative_name_or_spelling_of_press) {
+        this.alternative_name_or_spelling_of_press = alternative_name_or_spelling_of_press;
     }
 
     public String getName_of_newspaper_journal_printed() {
@@ -245,6 +305,7 @@ public class PrintersMapDataDTO {
     }
 
     public void setStartplace(String startplace) {
+
         this.startplace = startplace;
     }
 
@@ -382,6 +443,14 @@ public class PrintersMapDataDTO {
 
     public void setGroup3(String group3) {
         this.group3 = group3;
+    }
+
+    public String getComments() {
+        return comments;
+    }
+
+    public void setComments(String comments) {
+        this.comments = comments;
     }
 
 
